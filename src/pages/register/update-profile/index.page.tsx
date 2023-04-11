@@ -19,7 +19,7 @@ import { buildNextAuthOptions } from '@/pages/api/auth/[...nextauth].api'
 import { GetServerSideProps } from 'next'
 import { getServerSession } from 'next-auth'
 import { useRouter } from 'next/router'
-import { api } from '@/lib/axios'
+import { api } from '../../../lib/axios'
 
 const updateProfileSchema = z.object({
   bio: z.string(),
@@ -40,7 +40,7 @@ export default function TimeIntervals() {
   const router = useRouter()
 
   async function handleUpdateProfile(data: UpdateProfileData) {
-    await api.put('/users/prfile', {
+    await api.put('/users/profile', {
       bio: data.bio,
     })
 
