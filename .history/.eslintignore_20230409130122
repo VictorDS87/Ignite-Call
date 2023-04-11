@@ -1,0 +1,4 @@
+*.d.ts
+
+*eslint-disable camelcase
+*eslint-disable @typescript-eslint/camelcase
